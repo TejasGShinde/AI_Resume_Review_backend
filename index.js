@@ -3,7 +3,8 @@ const bodyParser = require('body-parser')
 
 const server = express();
 const router = express.Router();
-
+server.use(express.json());
+server.use(express.urlencoded({ extended: true }));
 const cors = require('cors');
 const mulRouter = require('./routes/multiply')
 server.use(cors());
