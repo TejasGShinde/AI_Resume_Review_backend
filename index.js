@@ -16,7 +16,7 @@ server.use('/api',mulRouter)
 server.get('/welcome',(req,res)=>{
      res.send("this is test api")
 })
-port =3000;
+port =4001;
 server.listen(port,()=>{
     console.log(`the server is runnning on port ${port}`);
 })
