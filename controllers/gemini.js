@@ -23,7 +23,7 @@ exports.geminiApi = async (req, res) => {
         const pdfData = await pdfParse(dataBuffer);
         const extractedText = pdfData.text;
 
-        const prompt = `Review the following resume data First String in response sould be the best role possible and then the imp points in review :\n\n${extractedText}`;
+        const prompt = `Review the following resume data and give one line best job query to search based on resume  :\n\n${extractedText}`;
         const result = await model.generateContent(prompt);
         const responseText = await result.response.text();
 
