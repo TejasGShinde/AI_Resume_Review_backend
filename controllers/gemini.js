@@ -52,7 +52,7 @@ exports.getResumeSummary = async (req, res) => {
         const pdfData = await pdfParse(dataBuffer);
         const extractedText = pdfData.text;
 
-        const prompt = `Review the following resume data give point wise summary with ats score how to get notices and all :\n\n${extractedText}`;
+        const prompt = `Review the following resume data give point wise and step wise or say section wise plus give some score as well for the resume summary with ats score how to get notices and all :\n\n${extractedText}`;
         const result = await model.generateContent(prompt);
         const responseText = await result.response.text();
 
