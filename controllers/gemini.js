@@ -56,7 +56,7 @@ exports.getResumeSummary = async (req, res) => {
   1. ATS (Applicant Tracking System) Score.
   2. A step-by-step or section-wise breakdown.
   3. Suggest improvements for each section.
-  4. Suggest how to get noticed by recruiters. add && to differ in section so i get to know in frontend :\n\n${extractedText}`;
+  4. Suggest how to get noticed by recruiters. add at the end of the each section && to differ in section so i get to know in frontend :\n\n${extractedText}`;
         const result = await model.generateContent(prompt);
         const responseText = await result.response.text();
 
